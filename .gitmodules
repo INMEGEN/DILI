@@ -1,0 +1,3 @@
+[submodule "bibliometrics"]
+	path = bibliometrics
+	url = https://github.com/CSB-IG/bibliometrics.git
