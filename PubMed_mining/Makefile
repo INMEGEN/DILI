@@ -8,6 +8,8 @@ years:
 	find  -iname '*medline.xz' | ./years.sh
 
 
+countries:
+	find  -iname '*medline.xz' | ./countries.sh
 
 
 bibliometrics:
