@@ -1,11 +1,13 @@
 all: edgelists years
 
-edgelists: bibliometrics
+edgelists: 
 	find  -iname '*medline.xz' | ./nw.sh 
 
 
-years: bibliometrics
-	./years.sh
+years: 
+	find  -iname '*medline.xz' | ./years.sh
+
+
 
 
 bibliometrics:
