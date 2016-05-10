@@ -214,6 +214,6 @@ H <- ggplot(Hep, aes(x = year, y = data, colour = type, shape = type)) +
 	scale_y_continuous(breaks = seq(0, max(Hep$data) + 5, by = 5))
 
 
-ggsave("../plots/NoHep.pdf", plot = nH)
-ggsave("../plots/Hep.pdf", plot = H)
+ggsave("../plots/Years_NoHep.pdf", plot = nH)
+ggsave("../plots/Years_Hep.pdf", plot = H)
 # ggsave("../plots/all.pdf", plot = g)
