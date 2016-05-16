@@ -16,6 +16,7 @@ import networkx as nx
 from networkx.readwrite import json_graph
 
 def die():
+	print("input does not comply with required format:\n\tnode1 <tab> node2 <tab> weight", file=sys.stderr)
 	exit(1)
 
 graph = nx.Graph()
