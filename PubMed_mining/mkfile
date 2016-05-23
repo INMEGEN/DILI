@@ -1,8 +1,11 @@
-HTML=`{find . -name '*_edgelist.tsv.xz' | sed -s 's/_edgelist.tsv.xz/.md/g'}
+MD=`{find . -name '*_edgelist.tsv.xz' | sed -s 's/_edgelist.tsv.xz/.md/g'}
 JS=`{find . -name '*_edgelist.tsv.xz' | sed -s 's/_edgelist.tsv.xz/.js/g'}
 JSON=`{find . -name '*_edgelist.tsv.xz' | sed -s 's/_edgelist.tsv.xz/.json/g'}
 
-all:V: $JSON $JS $HTML
+networks.tar.xz: all
+	bsdtar --xz -cf $target $JSON $JS $MD
+
+all:V: $JSON $JS $MD
 
 %.json:	%_edgelist.tsv.xz
 	xzcat $prereq | ./edgelist2json.py > $target
