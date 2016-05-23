@@ -1,6 +1,14 @@
-ALL=`{find . -name '*_edgelist.tsv.xz' | sed -s 's/_edgelist.tsv.xz/.json/g'}
+HTML=`{find . -name '*_edgelist.tsv.xz' | sed -s 's/_edgelist.tsv.xz/.md/g'}
+JS=`{find . -name '*_edgelist.tsv.xz' | sed -s 's/_edgelist.tsv.xz/.js/g'}
+JSON=`{find . -name '*_edgelist.tsv.xz' | sed -s 's/_edgelist.tsv.xz/.json/g'}
 
-all:V: $ALL
+all:V: $JSON $JS $HTML
 
 %.json:	%_edgelist.tsv.xz
 	xzcat $prereq | ./edgelist2json.py > $target
+
+%.js: %_edgelist.tsv.xz	tpl/tpl.js
+	sed -e "s#%JSON%#$stem.json#g" tpl/tpl.js > $target
+
+%.md: %_edgelist.tsv.xz	tpl/tpl.md
+	sed -e "s#%JS%#$stem.js#g" tpl/tpl.md > $target
