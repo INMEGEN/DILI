@@ -1,0 +1,12 @@
+{'directed': False,
+ 'graph': {},
+ 'links': [{'source': 0, 'target': 4, 'w': 2},
+           {'source': 1, 'target': 2, 'w': 2},
+           {'source': 1, 'target': 3, 'w': 2},
+           {'source': 2, 'target': 3, 'w': 2}],
+ 'multigraph': False,
+ 'nodes': [{'id': 'Male'},
+           {'id': 'Aryl Hydrocarbon Hydroxylases/*metabolism'},
+           {'id': 'Cytochrome P-450 CYP2C9'},
+           {'id': 'Biotransformation'},
+           {'id': 'Female'}]}

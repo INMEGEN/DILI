@@ -1,0 +1,5 @@
+{'directed': False,
+ 'graph': {},
+ 'links': [{'source': 0, 'target': 1, 'w': 2}],
+ 'multigraph': False,
+ 'nodes': [{'id': 'Thioridazine/*adverse effects'}, {'id': 'Male'}]}
